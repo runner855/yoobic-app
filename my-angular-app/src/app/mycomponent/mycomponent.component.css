@@ -1,0 +1,21 @@
+.container{
+  text-align: center;
+  background-color: rgb(65, 164, 225);
+  border: solid 2px black;
+  border-radius: 5px;
+}
+
+h5{
+  font-size: 40px;
+  text-transform:uppercase ;
+}
+
+.image{
+  text-align: center;
+}
+
+img:hover{
+  border: solid 6px pink;
+  border-radius: 6px;
+}
+
