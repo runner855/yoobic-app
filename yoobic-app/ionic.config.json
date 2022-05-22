@@ -1,0 +1,7 @@
+{
+  "name": "yoobic-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
