@@ -6,9 +6,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginPipe } from './login.pipe';
+import { HeroesPipe } from './heroes.pipe';
+import { HeroPipe } from './hero.pipe';
+import { SidenavPipe } from './sidenav.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginPipe, HeroesPipe, HeroPipe, SidenavPipe],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
