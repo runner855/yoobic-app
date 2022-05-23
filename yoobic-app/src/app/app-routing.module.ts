@@ -3,9 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./sidenav/sidenav.module').then( m => m.SidenavPageModule)  
   }
+  
  ];
 
 @NgModule({
