@@ -4,10 +4,24 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./sidenav/sidenav.module').then( m => m.SidenavPageModule)  
-  }
-  
- ];
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'heroes',
+    loadChildren: () => import('./pages/heroes/heroes.module').then( m => m.HeroesPageModule)
+  },
+  {
+    path: 'hero',
+    loadChildren: () => import('./pages/hero/hero.module').then( m => m.HeroPageModule)
+  },
+
+ 
+];
 
 @NgModule({
   imports: [
