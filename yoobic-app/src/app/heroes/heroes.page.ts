@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { heroes } from './heroes';
+import { HEROES } from '../heroes';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { heroes } from './heroes';
 })
 export class HeroesPage implements OnInit {
 
-  heroes = heroes;
+  heroes = HEROES;
   
 
   

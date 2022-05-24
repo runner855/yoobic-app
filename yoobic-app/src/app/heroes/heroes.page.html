@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Heroes</ion-title>
+    <ion-title>Heroes List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="card-cont">
-  <div *ngFor="let hero of heroes">
-    <ion-card>
+    <div *ngFor="let hero of heroes">
+      <ion-card>
       
       <img src="{{ hero.image }}" alt="image">
       <ion-card-header>
@@ -19,17 +19,9 @@
       </ion-card-content>
       <ion-button color="warning" type="button" (click)="onLearnMore()">Learn More</ion-button>
    
-    </ion-card>
-  </div>
+      </ion-card>
+    </div>
   
-   
-    
-    
-
   </div>
-
-  
-
-
 
 </ion-content>
