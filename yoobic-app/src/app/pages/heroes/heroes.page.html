@@ -5,19 +5,22 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="card-cont">
   <div *ngFor="let hero of heroes">
     <ion-card>
+      
       <img src="{{ hero.image }}" alt="image">
       <ion-card-header>
         <ion-card-subtitle>Destination</ion-card-subtitle>
         <ion-card-title>{{ hero.name }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        {{ hero.description }}
+        {{ hero.shortdescription }}
       </ion-card-content>
       <ion-button color="warning" type="button" (click)="onLearnMore()">Learn More</ion-button>
+   
     </ion-card>
+  </div>
   
    
     
