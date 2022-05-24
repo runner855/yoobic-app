@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>heroes</ion-title>
+    <ion-title>Heroes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<h1>I am on heroes page</h1>
+
+  <div *ngFor="let hero of heroes">
+    <ion-card>
+      <img src="{{ hero.image }}" alt="image">
+      <ion-card-header>
+        <ion-card-subtitle>Destination</ion-card-subtitle>
+        <ion-card-title>{{ hero.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ hero.description }}
+      </ion-card-content>
+      <ion-button color="warning" type="button" (click)="onLearnMore()">Learn More</ion-button>
+    </ion-card>
+  
+   
+    
+    
+
+  </div>
+
+  
+
+
+
 </ion-content>

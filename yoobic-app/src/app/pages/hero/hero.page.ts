@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroPage implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
+
+  onReturn(){
+    this.router.navigateByUrl('/heroes');
+  }
 
   ngOnInit() {
   }
