@@ -28,12 +28,14 @@
   </div>-->
 
   <h2>Star Wars</h2>
-  <div *ngFor="let hero of heroes" style="text-align:center;">
+  <div *ngFor="let hero of heroes" style="text-align:left;">
   <ion-card class="heroes">
    <ion-card-title>{{ hero.name }}</ion-card-title>
   
    <img src="{{hero.image}}" alt="image">
-   <ion-card-content style="text-align:left;">{{hero.description}}</ion-card-content>
+   <ion-card-content >
+     {{hero.description}}
+    </ion-card-content>
       <ion-button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
         Learn More
 
@@ -42,7 +44,26 @@
    
   </ion-card>
 </div>
-<app-hero [hero]="selectedHero"></app-hero>
+
+  <div class="card-cont">
+    <div *ngIf="selectedHero">
+      <ion-card>
+      
+      <ion-img src="{{ selectedHero.image }}" alt="image"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ selectedHero.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ selectedHero.description }}
+      </ion-card-content>
+      
+   
+      </ion-card>
+    </div>
+  
+  </div>
+
+ 
 
   
 

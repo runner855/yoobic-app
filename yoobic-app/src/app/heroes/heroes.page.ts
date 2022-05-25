@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HEROES } from '../heroes';
 import { Hero } from '../hero';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Hero } from '../hero';
   templateUrl: './heroes.page.html',
   styleUrls: ['./heroes.page.scss'],
 })
+
 export class HeroesPage implements OnInit {
 
   heroes = HEROES;
@@ -19,19 +21,19 @@ export class HeroesPage implements OnInit {
   
 
 
-  constructor(public router : Router) { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   // onLearnMore(form: NgForm) {
   //   this.router.navigateByUrl('/hero')
   // }
 
-  onSelect(hero:Hero ): void {
-    this.selectedHero = hero;
-    
-  }
+
   
 
   ngOnInit() {
+     let id = this.activatedRoute.snapshot.paramMap.get('id');
+     console.log(id);
+
   }
 
 }
