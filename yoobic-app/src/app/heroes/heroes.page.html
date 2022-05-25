@@ -3,28 +3,58 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>hello</ion-title>
+    <ion-title>Star Wars</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="card-cont">
+  <!--<div class="card-cont">
     <div *ngFor="let hero of heroes">
       <ion-card>
       
       <img src="{{ hero.image }}" alt="image">
       <ion-card-header>
-        <ion-card-subtitle>Destination</ion-card-subtitle>
         <ion-card-title>{{ hero.name }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         {{ hero.shortdescription }}
       </ion-card-content>
-      <ion-button color="warning" type="button" (click)="onLearnMore()">Learn More</ion-button>
+      <ion-button [class.selected]="hero === selectedHero" color="warning" type="button" (click)="onSelect()">Learn More</ion-button>
+      <span class="badge">{{hero.id}}</span>
    
       </ion-card>
     </div>
   
+  </div>-->
+
+  <h2>Star Wars</h2>
+  <ul class="heroes">
+    <div *ngFor="let hero of heroes">
+      <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span>
+        <span class="name">{{hero.name}}</span>
+
+      </button>
+
+    </div>
+  </ul>
+
+  <div *ngIf="selectedHero">
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-title>{{ selectedHero.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ selectedHero.description }}
+        <img src="{{selectedHero.image}}" alt="image">
+      </ion-card-content>
+      <ion-button [class.selected]="hero === selectedHero" color="warning" type="button" (click)="onSelect()">Learn More</ion-button>
+   
+      </ion-card>
   </div>
+
+
+  
 
 </ion-content>
