@@ -28,16 +28,18 @@
   </div>-->
 
   <h2>Star Wars</h2>
-  <ul class="heroes">
-    <div *ngFor="let hero of heroes">
-      <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>
-        <span class="name">{{hero.name}}</span>
+  <div *ngFor="let hero of heroes">
+  <ion-card class="heroes">
+   <ion-card-title>{{ hero.name }}</ion-card-title>
+   <img src="{{hero.image}}" alt="image">
+      <ion-button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+        Learn More
 
-      </button>
+      </ion-button>
 
-    </div>
-  </ul>
+   
+  </ion-card>
+</div>
 
   <div *ngIf="selectedHero">
     <ion-card>
