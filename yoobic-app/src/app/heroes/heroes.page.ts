@@ -25,8 +25,9 @@ export class HeroesPage implements OnInit {
   //   this.router.navigateByUrl('/hero')
   // }
 
-  onSelect(hero:Hero): void {
+  onSelect(hero:Hero ): void {
     this.selectedHero = hero;
+    
   }
   
 

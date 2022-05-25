@@ -15,6 +15,8 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl('/heroes')
   }
 
+
+
   ngOnInit() {
   }
 
