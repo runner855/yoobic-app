@@ -18,8 +18,7 @@ const routes: Routes = [
   {
     path: 'heroes/:heroId',
     loadChildren: () => import('./hero/hero.module').then(m => m.HeroPageModule)
-  },
-
+  }
 
 
 

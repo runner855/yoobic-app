@@ -19,7 +19,7 @@ export class HeroesPage implements OnInit {
   constructor(private heroService: HeroService) { }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroes = this.heroService.getHeroes()
   }
 
   ngOnInit() {

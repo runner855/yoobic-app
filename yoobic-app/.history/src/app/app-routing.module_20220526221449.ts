@@ -19,7 +19,10 @@ const routes: Routes = [
     path: 'heroes/:heroId',
     loadChildren: () => import('./hero/hero.module').then(m => m.HeroPageModule)
   },
-
+  {
+    path: 'messages',
+    loadChildren: () => import('./messages/messages.module').then(m => m.MessagesPageModule)
+  },
 
 
 
