@@ -14,14 +14,24 @@ import { HeroService } from '../hero.service';
 
 export class HeroesPage implements OnInit {
 
+  // heroes = HEROES;
   heroes: Hero[] = [];
+
+
+
+
+
 
   constructor(private heroService: HeroService) { }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+    this.heroes = this.heroService.getHeroes();
   }
+
+
+
+
+
 
   ngOnInit() {
     this.getHeroes();

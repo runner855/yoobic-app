@@ -4,7 +4,7 @@
       <ion-menu-button hidden="true"></ion-menu-button>
     </ion-buttons>
 
-
+    
   </ion-toolbar>
 </ion-header>
 
@@ -13,17 +13,17 @@
     <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/84587/preview.svg" alt="user-icon">
     <h2>Sign In</h2>
   </div>
-
+  
 
   <form #loginForm="ngForm" novalidate>
     <ion-list>
       <ion-item>
         <ion-icon name="mail-sharp"></ion-icon><br><br>
-        <ion-input position="stacked" name="email" type="text" placeholder=" *E-mail" required></ion-input>
+        <ion-input position="stacked"name="email" type="text"placeholder=" *E-mail" required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-icon name="lock-closed-sharp"></ion-icon>
-        <ion-input position="stacked" name="password" type="text" placeholder=" *password" required></ion-input>
+      <ion-icon name="lock-closed-sharp"></ion-icon>        
+      <ion-input  position="stacked" name="password" type="text"placeholder=" *password" required></ion-input>
       </ion-item>
     </ion-list>
 
@@ -36,22 +36,22 @@
 
     <ion-row>
       <ion-col>
-        <ion-button color="warning" type="submit" [routerLink]="['/heroes']" expand="block">Sign In</ion-button>
+        <ion-button color="warning" type="submit"(click)="onLogin()" expand="block">Sign In</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="warning" type="submit" expand="block">Sign Up</ion-button>
-        <ion-text>
+        <ion-button color="warning"type="submit"(click)="onLogin()" expand="block">Sign Up</ion-button>
+        <ion-text >
           <a href="">forgot password?</a>
         </ion-text>
       </ion-col>
     </ion-row>
 
+   
 
 
-
-
-
+ 
+   
   </form>
 
-  <div class="terms"><a href="">terms and conditions</a></div>
+  <div class="terms" ><a href="">terms and conditions</a></div>
 </ion-content>

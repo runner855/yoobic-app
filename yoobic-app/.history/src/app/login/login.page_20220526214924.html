@@ -36,10 +36,10 @@
 
     <ion-row>
       <ion-col>
-        <ion-button color="warning" type="submit" [routerLink]="['/heroes']" expand="block">Sign In</ion-button>
+        <ion-button color="warning" type="submit" (click)="onLogin()" expand="block">Sign In</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="warning" type="submit" expand="block">Sign Up</ion-button>
+        <ion-button color="warning" type="submit" (click)="onLogin()" expand="block">Sign Up</ion-button>
         <ion-text>
           <a href="">forgot password?</a>
         </ion-text>

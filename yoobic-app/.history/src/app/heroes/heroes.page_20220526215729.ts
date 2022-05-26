@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Hero, HEROES } from '../heroes';
+import { HEROES } from '../heroes';
 import { HeroService } from '../hero.service';
 
 
@@ -14,17 +14,24 @@ import { HeroService } from '../hero.service';
 
 export class HeroesPage implements OnInit {
 
+  // heroes = HEROES;
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
-  }
+
+
+
+
+  constructor() { }
+
+  // onLearnMore(form: NgForm) {
+  //   this.router.navigateByUrl('/hero')
+  // }
+
+
+
 
   ngOnInit() {
-    this.getHeroes();
 
 
   }

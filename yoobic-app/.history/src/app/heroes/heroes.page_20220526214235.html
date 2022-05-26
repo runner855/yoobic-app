@@ -10,13 +10,13 @@
 <ion-content>
 
 
-  <h2 style="color:blanchedalmond;">Star Wars Heroes</h2>
+  <h2>Star Wars Heroes</h2>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let hero of heroes"
         style="height: 100%; display: flex; align-items: center; justify-content: center;">
 
-        <a [title]="hero.name + ' details'" [routerLink]="['/heroes', hero.id]" style="text-decoration:none;">
+        <button [title]="hero.name + ' details'" [routerLink]="['/heroes', hero.id]" style="text-decoration:none;">
           <ion-card class="heroes">
             <img src="{{hero.image}}" alt="image">
             <ion-card-header>
@@ -24,7 +24,7 @@
             </ion-card-header>
             <ion-card-content>{{hero.shortdescription}}</ion-card-content>
           </ion-card>
-        </a>
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
