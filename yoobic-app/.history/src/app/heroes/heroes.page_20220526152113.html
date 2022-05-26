@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Star Wars</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<div class="card-cont">
+    <div *ngFor="let hero of heroes">
+      <ion-card>
+      
+      <img src="{{ hero.image }}" alt="image">
+      <ion-card-header>
+        <ion-card-title>{{ hero.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ hero.shortdescription }}
+      </ion-card-content>
+      <ion-button [class.selected]="hero === selectedHero" color="warning" type="button" (click)="onSelect()">Learn More</ion-button>
+      <span class="badge">{{hero.id}}</span>
+   
+      </ion-card>
+    </div>
+  
+  </div> first card-->
+
+  <h2 style="text-align:center;font-size:xx-large">Star Wars</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let hero of heroes">
+
+
+        <ion-card class="heroes">
+          <img src="{{hero.image}}" alt="image">
+          <ion-card-header>{{ hero.name }}</ion-card-header>
+
+
+          <ion-card-content>
+            {{hero.shortdescription}}
+
+          </ion-card-content>
+
+
+          <ion-button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)" color="warning"
+            class="button button-block">
+            Learn More </ion-button>
+
+
+
+
+
+
+
+
+        </ion-card>
+
+
+      </ion-col>
+
+
+
+
+    </ion-row>
+
+
+
+
+  </ion-grid>
+
+
+
+
+  <div class="card-cont-details">
+    <div *ngIf="selectedHero" class="card-cont-details">
+
+      <ion-card style="width:700px;">
+
+        <ion-img src="{{ selectedHero.image }}" alt="image"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ selectedHero.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ selectedHero.description }}
+        </ion-card-content>
+        <div class="back-btn">
+          <ion-button type="button" color="warning" class="button button-block">
+            Back To Heroes
+
+          </ion-button>
+        </div>
+
+
+
+      </ion-card>
+    </div>
+
+  </div>
+
+
+
+
+
+</ion-content>

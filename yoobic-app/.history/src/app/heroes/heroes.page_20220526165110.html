@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Star Wars</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- [class.selected]="hero === selectedHero" (click)="onSelect(hero)" -->
+  <h2 style="text-align:center;font-size:xx-large">Star Wars</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let hero of heroes">
+
+
+        <ion-card class="heroes">
+          <img src="{{hero.image}}" alt="image">
+          <ion-card-header>{{ hero.name }}
+          </ion-card-header>
+
+
+          <ion-card-content>
+            {{hero.shortdescription}}
+
+
+
+          </ion-card-content>
+
+
+
+
+
+
+
+
+
+
+
+
+        </ion-card>
+
+
+      </ion-col>
+
+
+
+
+    </ion-row>
+
+
+
+
+  </ion-grid>
+
+
+
+
+  <div class="card-cont-details">
+    <div *ngIf="selectedHero" class="card-cont-details">
+
+      <ion-card style="width:700px;">
+
+        <ion-img src="{{ selectedHero.image }}" alt="image" style="text-align:center;"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ selectedHero.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ selectedHero.description }}
+        </ion-card-content>
+        <div class="back-btn">
+          <ion-button type="button" color="warning" class="button button-block">
+            Back To Heroes
+
+          </ion-button>
+        </div>
+
+
+
+      </ion-card>
+
+    </div>
+
+  </div>
+
+
+
+
+
+</ion-content>
