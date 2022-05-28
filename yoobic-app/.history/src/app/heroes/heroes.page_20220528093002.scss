@@ -4,12 +4,12 @@ ion-col {
 }
 
 ion-card{
-  height:400px;
+  height:100%;
   width:300px;
 }
 
 img{
-  height:170px !important;
+  height:170px;
    width:300px;
    border-radius: 5px;
  }
@@ -24,3 +24,6 @@ ion-card{
   background-color: #FFE81F;
   color:black;
 }
+
+ion-col {
+  display: flex;

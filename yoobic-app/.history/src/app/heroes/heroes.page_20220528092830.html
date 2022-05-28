@@ -10,11 +10,11 @@
 <ion-content>
 
 
-  <h2>Star Wars Heroes</h2>
+  <h2 style="color:blanchedalmond;">Star Wars Heroes</h2>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let hero of heroes"
-        style="height: 100%; display: flex; align-items: center; justify-content: center;">
+        style="height: 100%; display: flex; align-items: center; justify-content: center;" size-xs="12" size-md="5">
 
         <a [title]="hero.name + ' details'" [routerLink]="['/heroes', hero.id]" style="text-decoration:none;">
           <ion-card class="heroes">
